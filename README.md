@@ -2,11 +2,7 @@
 
 A website that helps instructors use autograding tools for their courses.
 
-## Thanks
 
-This work is supported by [The Learning Design & Technology team](https://learningdesign.as.virginia.edu/) at the University of Virginia.
-
-# autograder_gen_site
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
@@ -29,3 +25,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Thanks
+
+This work is supported by [The Learning Design & Technology team](https://learningdesign.as.virginia.edu/) at the University of Virginia.
+
