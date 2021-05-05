@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "tbrown122387",
+      "name": "Taylor R. Brown",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1740324?v=4",
+      "profile": "http://people.virginia.edu/~trb5me/",
+      "contributions": [
+        "projectManagement"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "autograder_gen_site",
+  "projectOwner": "tbrown122387",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
