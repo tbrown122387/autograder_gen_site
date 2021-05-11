@@ -13,6 +13,15 @@
       "contributions": [
         "projectManagement"
       ]
+    },
+    {
+      "login": "tzhai2",
+      "name": "Max Tianzhi Zhai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84029367?v=4",
+      "profile": "https://github.com/tzhai2",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
