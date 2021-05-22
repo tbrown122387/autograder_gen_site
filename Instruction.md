@@ -19,7 +19,7 @@ Please make sure your repo is up to date. When you are coding your repo, the mai
 
 ## Step 3
 
-You can create a local directory to save the codes from GitHub. You may can name as "AutoGraderR" (the name is totally depends on you). Then you can enter the directory and right click "Git Bash Here". It will give you a git terminal.
+You can create a local directory to save the codes from GitHub. You may name as "AutoGraderR" (the name totally depends on you). Then you can enter the directory and right-click "Git Bash Here". It will give you a git terminal.
 
 
 
@@ -37,7 +37,7 @@ If you successfully clone the main repo you will see a new folder has been add i
 
 ## Step 4
 
-Before you start coding, you **must** do `git pull`, otherwise you will have a conflict issue. This command will pull every update to your local repo. After you finish your coding and test, you can use `git add .` to add every file into git. Then you can use    `git commit -m "YOUR COMMIT MSG"`    to add some commit message that describe your code. Then you need to use "git push" to submit code to your repo.
+Before you start coding, you **must** do `git pull`, otherwise, you will have a conflict issue. This command will pull every update to your local repo. After you finish your coding and test, you can use `git add .` to add every file into git. Then you can use    `git commit -m "YOUR COMMIT MSG"`    to add some commit message that describes your code. Then you need to use "git push" to submit code to your repo.
 
 ![Step4](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step4.PNG)
 
@@ -46,3 +46,19 @@ Before you start coding, you **must** do `git pull`, otherwise you will have a c
 ![Step4_3](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step4_3.PNG)
 
 ![Step4_4](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step4_4.PNG)
+
+## Step 5
+
+When you successfully push your code to your repo, you can click the Open pull request button to submit your code to the main repo.
+
+![Step5](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step5.PNG)
+
+![Step5_1](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step5_1.PNG)
+
+Then you can add your description of your code here. Please explain your code as well as possible so that it can save a lot of time for reviewing those codes. Then you need to click the create pull request button.
+
+![Step5_2](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step5_2.PNG)
+
+## Step 6
+
+Yeyyy! You have successfully submitted your code to the main repo and it will be waiting for the review to show in the repo.
