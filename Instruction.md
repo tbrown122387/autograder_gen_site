@@ -2,7 +2,7 @@
 
 ## Step 0
 
-Please install Git into your operation system. You may use this following link: https://git-scm.com/
+Please install Git into your operation system. You may use this following link: [https://git-scm.com/]( https://git-scm.com/)
 
 ## Step 1
 
@@ -13,19 +13,19 @@ If you have not Fork the repository, you need to click the Fork button on the to
 
 ## Step 2
 
-Please make sure your repo is up to date. When you are coding your repo, the main repo may have a new commit. To update your repo you can either use "git fetch origin" or you can click the following button under the Fetch upstream button.
+Please make sure your repo is up to date. When you are coding your repo, the main repo may have a new commit. To update your repo you can either use `git fetch origin` or you can click the following button under the Fetch upstream button.
 
 ![Step2](Instruction.assets/Step2.PNG)
 
 ## Step 3
 
-You can create a local directory to save the codes from GitHub. You may name as "AutoGraderR" (the name totally depends on you). Then you can enter the directory and right-click "Git Bash Here". It will give you a git terminal.
+You can create a local directory to save the codes from GitHub. You may name as "AutoGraderR" (the name totally depends on you). Then you can enter the directory and right-click Git Bash Here. It will give you a git terminal.
 
 
 
 ![Step3](Instruction.assets/Step3.png)
 
-Then you can use "git clone https://github.com/[YOUR USER NAME]/autograder_gen_site.git" to clone a local repo. Please use your repo's URL otherwise you cannot push your code into the GitHub's repo. You can click Code button to check your URL.
+Then you can use `git clone https://github.com/[YOUR USER NAME]/autograder_gen_site.git` to clone a local repo. Please use your repo's URL otherwise you cannot push your code into the GitHub's repo. You can click Code button to check your URL.
 
 ![Step3_2](Instruction.assets/Step3_2.PNG)
 
