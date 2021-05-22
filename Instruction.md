@@ -6,13 +6,11 @@ Please install Git into your operation system. You may use this following link: 
 
 ## Step 1
 
-<<<<<<< HEAD:Instruction.md
+
 If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.
 
 ![Step1](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step1.PNG)
 =======
-If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.![plot](.\Instruction_image\Step1.PNG)
->>>>>>> 89752f74cf890ec6a051017e3be466cf479b9f13:How to submit code to this repo.md
 
 ## Step 2
 
@@ -49,3 +47,4 @@ Before you start coding, you **must** do `git pull`, otherwise you will have a c
 ![Step4_3](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step4_3.PNG)
 
 ![Step4_4](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step4_4.PNG)
+
