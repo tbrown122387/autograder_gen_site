@@ -51,9 +51,9 @@ Before you start coding, you **must** do `git pull`, otherwise, you will have a 
 
 When you successfully push your code to your repo, you can click the Open pull request button to submit your code to the main repo.
 
-![Step5](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step5.PNG)
+![Step5](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step5.PNG)
 
-![Step5_1](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction.assets\Step5_1.PNG)
+![Step5_1](https://github.com/Haohao99/autograder_gen_site/blob/main/Instruction.assets/Step5_1.PNG)
 
 Then you can add your description of your code here. Please explain your code as well as possible so that it can save a lot of time for reviewing those codes. Then you need to click the create pull request button.
 
