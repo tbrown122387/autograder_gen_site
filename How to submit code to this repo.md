@@ -6,9 +6,7 @@ Please install Git into your operation system. You may use this following link: 
 
 ## Step 1
 
-If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.
-
-![Step1](C:\Users\haohu\OneDrive\桌面\Step1.PNG)
+If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.![Step1](C:\Users\haohu\Github\AutoGrade\autograder_gen_site\Instruction_image\Step1.PNG)
 
 ## Step 2
 
@@ -30,7 +28,9 @@ If you successfully clone the main repo you will see a new folder has been add i
 
  ![Step3_3](C:\Users\haohu\OneDrive\桌面\Step3_3.PNG)
 
+
+
 ## Step 4
 
-After you finish your coding and test, you can use "git add ." to add every file into git. Then you can use "git commit -m "YOUR COMMIT MSG" to add some commit message that describe your code. Then you need to use "git push" to submit code to your repo.
+Before you start coding, you **must** do `git pull`, otherwise you will have a conflict issue. This command will pull every update to your local repo. After you finish your coding and test, you can use `git add .` to add every file into git. Then you can use    `git commit -m "YOUR COMMIT MSG"`    to add some commit message that describe your code. Then you need to use "git push" to submit code to your repo.
 
