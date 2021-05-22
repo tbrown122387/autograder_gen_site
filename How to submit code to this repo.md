@@ -6,7 +6,7 @@ Please install Git into your operation system. You may use this following link: 
 
 ## Step 1
 
-If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.![Step1](.\Instruction_image\Step1.PNG)
+If you have not Fork the repository, you need to click the Fork button on the top right to create your own repository. If you have already Fork the repo please go to step 2.![plot](.\Instruction_image\Step1.PNG)
 
 ## Step 2
 
