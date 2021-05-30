@@ -9,6 +9,16 @@ server <- function(input, output,session){
     else{"File Not Yet Submitted."}
   })
   
+  data <- reactive({
+    inFile <- input$file1
+    if(!is.null(inFile)){
+      read.csv(inFile$datapath)    
+    }
+  })
+  
+  output$table1 <- renderTable(data())
+  
+  
   output$feedback2 <- renderText({
     file2_state <<- !is.null(input$file2)
     if (file2_state) {
@@ -50,7 +60,7 @@ server <- function(input, output,session){
     all_state = c(file1_state,file2_state,file3_state,file4_state,file5_state,file6_state)
     if(!all(all_state)){
       session$sendCustomMessage(type = 'testmessage',
-                                message = 'One of files is missing!')
+                                message = 'One of the files is missing!')
     }
       
   })
