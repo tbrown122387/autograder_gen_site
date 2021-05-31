@@ -19,7 +19,6 @@ ui <- fluidPage(
     "Step 3: Type in any additional packages needed, with a comma between packages (optional)",
     placeholder = "Ex: tidyverse, survival"
   ),
-  textOutput(outputId = "num.tests"),
   strong("Step 4: Write tests that result in a Boolean"),
   sidebarLayout(
     sidebarPanel = sidebarPanel(

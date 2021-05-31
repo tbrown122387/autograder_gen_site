@@ -22,10 +22,6 @@ server <- function(input, output, session) {
   ##
   num.tests <- reactiveValues(count = 1)
 
-  output$num.tests <- renderText({
-    paste(num.tests$count, "test(s)")
-  })
-
   observeEvent(input$addTests, {
     insertUI("#mainPanel",
       where = "beforeEnd",
