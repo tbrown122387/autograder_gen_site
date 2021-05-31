@@ -1,3 +1,9 @@
+##
+##  TODO: These functions all create files in the R/ directory, which works locally, 
+##  but isn't great long term. I think using temp files or keeping the files in-memory 
+##  would help when multiple people are using the website.
+##
+
 genSetupScript <- function(packageNames) {
   stopifnot(is.character(packageNames))
   scriptLines <- vector(

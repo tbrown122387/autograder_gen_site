@@ -15,10 +15,19 @@ server <- function(input, output, session) {
       "File Not Yet Submitted."
     }
   })
-
+  
+  observeEvent(input$checkAll, {
+    all_state <- c(!is.null(input$datasets))
+    if (!all(all_state)) {
+      session$sendCustomMessage(
+        type = "testmessage",
+        message = "One of files is missing!"
+      )
+    }
+  })
 
   ##
-  ##  Dealing with user defined Tests
+  ##  Dealing with user defined tests
   ##
   num.tests <- reactiveValues(count = 1)
 
@@ -60,9 +69,9 @@ server <- function(input, output, session) {
   observeEvent(input$removeTests, {
     if (num.tests$count > 1) {
       num.tests$count <- num.tests$count - 1
-      removeUI(selector = paste0("div:has(> #testLabel", num.tests$count, ")"))
+      removeUI(selector = paste0("div:has(> #testLabel", num.tests$count, ")")) # TODO: need to investigate selector behavior
       removeUI(selector = paste0("div:has(> #testContent", num.tests$count, ")"))
-      removeUI(selector = paste0("div:has(>> #testVisibility", num.tests$count, ")"))
+      removeUI(selector = paste0("div:has(>> #testVisibility", num.tests$count, ")")) ## >> is needed because of selectInput(). It results in a nested div
     }
   })
 
@@ -98,17 +107,5 @@ server <- function(input, output, session) {
         zip(file, files.to.zip)
       }
     )
-
-  ##
-  ##  Validation
-  ##
-  observeEvent(input$checkAll, {
-    all_state <- c(!is.null(input$datasets))
-    if (!all(all_state)) {
-      session$sendCustomMessage(
-        type = "testmessage",
-        message = "One of files is missing!"
-      )
-    }
-  })
+  
 }
