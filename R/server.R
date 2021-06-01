@@ -9,14 +9,17 @@ server <- function(input, output,session){
     else{"File Not Yet Submitted."}
   })
   
-  data <- reactive({
-    inFile <- input$file1
-    if(!is.null(inFile)){
-      read.csv(inFile$datapath)    
-    }
-  })
   
-  output$table1 <- renderTable(data())
+  output$table1 <- renderTable({
+    req(input$file1)
+    inFileList = list()
+    
+    for(i in 1:length(input$file1[,1])){
+      inFileList[[i]] <- read.csv(input$file1[[i, 'datapath']])
+    }
+    
+    return(inFileList)
+    })
   
   
   output$feedback2 <- renderText({
