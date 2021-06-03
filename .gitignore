@@ -1,6 +1,11 @@
 sample-assignment
 .DS_Store
 *.Rproj
+*.csv
+grade_one_submission.R
+run_autograder
+run_tests.R
+setup.sh
 
 # History files
 .Rhistory
