@@ -1,7 +1,6 @@
-library(shiny)
 source("gen_setup_script.R")
 
-server <- function(input, output, session) {
+gradescopeServer <- function(input, output, session) {
   ##
   ##  File input - external datasets
   ##
@@ -25,44 +24,44 @@ server <- function(input, output, session) {
       )
     }
   })
-
+  
   ##
   ##  Dealing with user defined tests
   ##
   num.tests <- reactiveValues(count = 1)
-
+  
   observeEvent(input$addTests, {
     insertUI("#mainPanel",
-      where = "beforeEnd",
-      ui = fluidRow(
-        column(
-          4,
-          textInput(
-            paste0("testLabel", num.tests$count),
-            label = NULL
-          )
-        ),
-        column(
-          4,
-          textInput(
-            paste0("testContent", num.tests$count),
-            label = NULL
-          )
-        ),
-        column(
-          4,
-          selectInput(
-            paste0("testVisibility", num.tests$count),
-            label = NULL,
-            choices = c("visible", "hidden", "after_due_date", "after_published")
-          )
-        )
-      )
+             where = "beforeEnd",
+             ui = fluidRow(
+               column(
+                 4,
+                 textInput(
+                   paste0("testLabel", num.tests$count),
+                   label = NULL
+                 )
+               ),
+               column(
+                 4,
+                 textInput(
+                   paste0("testContent", num.tests$count),
+                   label = NULL
+                 )
+               ),
+               column(
+                 4,
+                 selectInput(
+                   paste0("testVisibility", num.tests$count),
+                   label = NULL,
+                   choices = c("visible", "hidden", "after_due_date", "after_published")
+                 )
+               )
+             )
     )
-
+    
     num.tests$count <- num.tests$count + 1
   })
-
+  
   ##
   ## Removing Tests
   ##
@@ -74,7 +73,7 @@ server <- function(input, output, session) {
       removeUI(selector = paste0("div:has(>> #testVisibility", num.tests$count, ")")) ## >> is needed because of selectInput(). It results in a nested div
     }
   })
-
+  
   ##
   ##  Download the Zip
   ##
@@ -88,7 +87,7 @@ server <- function(input, output, session) {
             test.label <- input[[paste0("testLabel", i, sep = "")]]
             test.content <- input[[paste0("testContent", i, sep = "")]]
             test.visibility <- input[[paste0("testVisibility", i, sep = "")]]
-
+            
             all.tests[[i + 1]] <- c(test.label, test.content, test.visibility)
           }
         }

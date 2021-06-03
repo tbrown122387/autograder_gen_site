@@ -1,6 +1,4 @@
-library(shiny)
-
-ui <- fluidPage(
+gradescopeUI <- fluidPage(
   tags$head(tags$script(src = "message-handler.js")),
   titlePanel("AutoGrade R"),
   textInput(
@@ -30,22 +28,22 @@ ui <- fluidPage(
       column(
         4,
         textInput("test.label",
-          label = "Question Number",
-          placeholder = "Ex: Question 1a."
+                  label = "Question Number",
+                  placeholder = "Ex: Question 1a."
         )
       ),
       column(
         4,
         textInput("test.content",
-          label = "Test that results in Boolean",
-          placeholder = "Ex: sum(q1) == 4"
+                  label = "Test that results in Boolean",
+                  placeholder = "Ex: sum(q1) == 4"
         )
       ),
       column(
         4,
         selectInput("test.visibility",
-          label = "Visibility",
-          choices = c("visible", "hidden", "after_due_date", "after_published")
+                    label = "Visibility",
+                    choices = c("visible", "hidden", "after_due_date", "after_published")
         )
       ),
       id = "mainPanel"
