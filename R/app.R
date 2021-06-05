@@ -1,15 +1,22 @@
 library(shiny)
 source("ui/gradescopeUI.R")
+source("ui/localSubmissionsUI.R")
 source("server/gradescopeServer.R")
 
-ui <- tabsetPanel(
-  tabPanel("Gradescope",
-    gradescopeUI
+ui <- navbarPage(title = "Autograding in R",
+  tabPanel(
+    "Gradescope",
+    gradescopeUI('gradescope')
   ),
-  tabPanel("Local")
+  tabPanel(
+    "Running Locally",
+    localUI("local")
+  )
 )
-  
-  
-server <- gradescopeServer
+
+
+server <- function(input, output, session) {
+  gradescopeServer("gradescope")
+}
 
 shinyApp(ui, server)
