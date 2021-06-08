@@ -86,12 +86,6 @@ gradescopeServer <- function(id) {
         downloadHandler(
           filename = "autograder.zip",
           content = function(file) {
-            validate(
-              need(input$testLabel, 'Label!'),
-              need(input$testContent, 'Content'),
-              need(input$testVisibility, 'Visibility'),
-              need(input$assignmentName != "", 'AssignmentName'),
-            )
             all.tests <- list(c(input$testLabel, input$testContent, input$testVisibility))
             if (num.tests$count > 1) {
               for (i in 1:(num.tests$count - 1)) {
