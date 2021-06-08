@@ -2,6 +2,7 @@ library(shiny)
 source("gen_setup_script.R")
 
 server <- function(input, output, session) {
+  load_state <- FALSE
   ##
   ##  File input - external datasets
   ##
@@ -23,6 +24,24 @@ server <- function(input, output, session) {
         type = "testmessage",
         message = "One of files is missing!"
       )
+    }
+  })
+  
+  #load the required package by user input
+  
+  observeEvent(input$load,{
+    if(input$packages!=""){
+      packageslist <- strsplit(input$packages, ",")
+      for (i in packageslist){
+        install.packages(i)
+      }
+      load_state <<- TRUE
+    }
+  })
+  
+  output$feedback.packages <-renderText({
+    if(load_state){
+      paste(input$datasets$name, "Load package successfully.")
     }
   })
 
