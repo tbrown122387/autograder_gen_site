@@ -1,8 +1,13 @@
-localUI <- function(id, label = "localUI") {
+localSubmissionsUI <- function(id, label = "localUI") {
   ns <- NS(id)
 
   tagList(
-    titlePanel("Local Grading"),
-    textInput(inputId = ns("folderName"), label = "Folder Name")
+    titlePanel("Generate a grading bundle to run locally"),
+    textInput(
+      inputId = ns("sample"),
+      label = "Sample Text Input",
+      placeholder = "Enter text here!"
+    ),
+    textOutput(outputId = ns("sampleOutput"))
   )
 }
