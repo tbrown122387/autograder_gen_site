@@ -20,15 +20,15 @@ gradescopeServer <- function(id) {
         }
       })
 
-      observeEvent(input$checkAll, {
-        allState <- c(!is.null(input$datasets))
-        if (!all(allState)) {
-          session$sendCustomMessage(
-            type = "testmessage",
-            message = "One of files is missing!"
-          )
-        }
-      })
+      # observeEvent(input$checkAll, {
+      #   allState <- c(!is.null(input$datasets))
+      #   if (!all(allState)) {
+      #     session$sendCustomMessage(
+      #       type = "testmessage",
+      #       message = "One of files is missing!"
+      #     )
+      #   }
+      # })
 
       ##
       ##  Dealing with user defined tests
