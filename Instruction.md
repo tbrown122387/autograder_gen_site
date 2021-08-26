@@ -37,7 +37,7 @@ If you successfully clone the main repo you will see a new folder has been add i
 
 ## Step 4
 
-Before you start coding, you **must** do `git pull`, otherwise, you will have a conflict issue. This command will pull every update to your local repo. After you finish your coding and test, you can use `git add .` to add every file into git. Then you can use    `git commit -m "YOUR COMMIT MSG"`    to add some commit message that describes your code. Then you need to use "git push" to submit code to your repo.
+Before you start coding, you **must** do `git pull`, otherwise, you will have a conflict issue. This command will pull every update to your local repo. After you finish your coding and test, you can use `git add .` to add every file into git. Then you can use    `git commit -m "YOUR COMMIT MSG"`    to add some commit message that describes your code. Then you need to use `git push` to submit code to your repo.
 
 ![Step4](Instruction.assets/Step4.PNG)
 
