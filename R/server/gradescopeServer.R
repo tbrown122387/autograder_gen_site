@@ -5,6 +5,17 @@ gradescopeServer <- function(id) {
     id,
     function(input, output, session) {
       ns <- NS(id)
+      
+      ## Add packages into setup file
+      observeEvent(input$addPackages, {
+        output$packagename <- renderText({
+          paste(input$packages," is added.")
+        })
+        print("Add packages")
+        cat(sprintf("Rscript -e \"install.packages('%s')\"\n",input$packages),file="setup.sh",append=TRUE)
+      })
+      
+      
 
       ##
       ##  File input - external datasets
@@ -66,6 +77,10 @@ gradescopeServer <- function(id) {
 
         num.tests$count <- num.tests$count + 1
       })
+      
+      
+      
+      
 
       ##
       ## Removing Tests
@@ -96,10 +111,12 @@ gradescopeServer <- function(id) {
                 all.tests[[i + 1]] <- c(test.label, test.content, test.visibility)
               }
             }
-            packageNames <- unlist(strsplit(gsub(" ", "", input$packages), ","))
+            #packageNames <- unlist(strsplit(gsub(" ", "", input$packages), ","))
 
+            
+            #genSetupScript(c(packageNames, "gradeR")) # gradeR is needed
+            
             # 4 files needed for the autograding bundle
-            genSetupScript(c(packageNames, "gradeR")) # gradeR is needed
             genRunAutograder(input$assignmentName)
             genTestFile(all.tests)
             genGradeOneScript(input$assignmentName)

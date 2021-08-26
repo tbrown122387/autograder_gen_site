@@ -5,25 +5,30 @@ gradescopeUI <- function(id, label = "gradescopeUI") {
     tags$head(tags$script(src = "message-handler.js")),
     textInput(
       inputId = ns("assignmentName"),
-      label = "Step 1: Please write the name of each student's submission file. Each student's submission must be named this (case sensitive), or else it will not be graded.",
+      label = "Step 1: Please submit an assignment name",
       placeholder = "Ex: assignment01.R"
     ),
     fileInput(
       inputId = ns("datasets"),
-      label = "Step 2: Please upload all external data sets that are used in the assignment (optional).",
+      label = "Step 2: Please submit external datasets (optional)",
       multiple = TRUE,
       accept = c(".csv")
     ),
     textOutput(outputId = ns("feedbackDatasets")),
+    
+    ## Add packages
     textInput(
       inputId = ns("packages"),
-      label = "Step 3: Type in all required third-party packages in a comma-separated string (optional).",
+      label = "Step 3: Type in any additional packages needed, with a comma between packages (optional)",
       placeholder = "Ex: tidyverse, survival"
     ),
+    actionButton(ns("addPackages"), "Add Packages"),
+    textOutput(outputId = ns("packagename")),
+    
     sidebarLayout(
       sidebarPanel = sidebarPanel(
-        actionButton(ns("addTests"), "Add A Test"),
-        actionButton(ns("removeTests"), "Remove A Test", style = "center")
+        actionButton(ns("addTests"), "Add Tests"),
+        actionButton(ns("removeTests"), "Remove Tests", style = "center")
       ),
       mainPanel = mainPanel(
         column(
@@ -50,7 +55,7 @@ gradescopeUI <- function(id, label = "gradescopeUI") {
         id = "mainPanel"
       )
     ),
-    downloadButton(ns("downloadZip"), "Download Zip File")
-    #actionButton(ns("checkAll"), "Click Me"),
+    downloadButton(ns("downloadZip"), "Download Zip File"),
+    actionButton(ns("checkAll"), "Click Me"),
   )
 }
