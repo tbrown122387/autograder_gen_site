@@ -5,7 +5,6 @@ sample-assignment
 grade_one_submission.R
 run_autograder
 run_tests.R
-setup.sh
 
 # History files
 .Rhistory
